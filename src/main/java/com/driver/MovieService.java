@@ -34,14 +34,19 @@ public class MovieService {
 		return movieRepository.getMovie(movieName);
 	}
 	
-	  public void createMovieDirectorPair(String movie,String director){
-	        movieRepository.saveMovieDirectorPair(movie,director);
-	    }
 	
 	public Director getMyDirector(String directorName)
 	{
 		return movieRepository.getDirector(directorName);
 	}
+	
+	  public void createMovieDirectorPair(String movie,String director){
+	        movieRepository.saveMovieDirectorPair(movie,director);
+	    }
+	
+	   public List<String> findMoviesFromDirector(String directorName){
+	        return movieRepository.findMoviesFromDirector(directorName);
+	    }
 	
 	
 	public List<String> getAllMovie()
