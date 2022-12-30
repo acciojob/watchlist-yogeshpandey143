@@ -90,12 +90,12 @@ public class MovieRepository {
 	
 	
     public List<String> findMoviesFromDirector(String directorName) {
-        List<String> moviesList=new ArrayList<String>();
+        
         if(directorMoviesMapping.containsKey(directorName)){
-           return moviesList=directorMoviesMapping.get(directorName);
+           return directorMoviesMapping.get(directorName);
         }
         
-        return moviesList;
+        return new ArrayList<>();
   
     }
 
