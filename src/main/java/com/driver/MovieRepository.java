@@ -55,12 +55,8 @@ public class MovieRepository {
 	}
 	
 	public Movie getMovie(String movieName)
-	{
-		
-		
-			return movieList.get(movieName);
-	
-			
+	{	
+	return movieList.get(movieName);		
 	}
 	
 	
@@ -87,15 +83,7 @@ public class MovieRepository {
 	
 	public List<String> allMovie()
 	{
-		List<String> list = new ArrayList<>();
-		for( Map.Entry<String,Movie> entry : movieList.entrySet()) 
-		{
-			list.add(entry.getKey());
-			
-		}
-		
-		
-		return list;
+		 return new ArrayList<>(movieList.keySet());
 		}
 	
 	
